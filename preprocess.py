@@ -119,6 +119,8 @@ def make_instance_pkl_files(root_dir, midi_dir, num_bars, frame_per_bar, pitch_r
                 if pitch_range == 128:
                     base_note = 0
                 else:
+                    if not len(onset_inst.T.nonzero()[1]):
+                        continue  # all zeroes - nothing to do
                     highest_note = max(onset_inst.T.nonzero()[1])
                     lowest_note = min(onset_inst.T.nonzero()[1])
                     base_note = 12 * (lowest_note // 12)
