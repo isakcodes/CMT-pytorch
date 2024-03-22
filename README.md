@@ -7,8 +7,8 @@ Source code and generated samples for CMT (Chord Conditioned Melody Transformer)
 - matplotlib >= 3.3.1
 - numpy >= 1.19.1
 - pretty_midi >= 0.2.9
-- pytorch >= 1.0.0
-- yaml >= 0.2.5
+- torch >= 1.0.0
+- pyyaml >= 0.2.5
 
 ## File descriptions
   * `hparams.yaml` : specifies hyperparameters and paths to load data or save results.
