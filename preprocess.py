@@ -39,8 +39,8 @@ def make_instance_pkl_files(root_dir, midi_dir, num_bars, frame_per_bar, pitch_r
     num_test = int(len(song_list) * data_ratio[2])
     random.seed(0)
     eval_test_cand = set([song.split('/')[-1] for song in song_list])
-    eval_set = random.sample(eval_test_cand, num_eval)
-    test_set = random.sample(eval_test_cand - set(eval_set), num_test)
+    eval_set = random.sample(sorted(eval_test_cand), num_eval)
+    test_set = random.sample(sorted(eval_test_cand - set(eval_set)), num_test)
 
     for midi_file in tqdm(midi_files, desc="Processing"):
         song_title = midi_file.split('/')[-2]
