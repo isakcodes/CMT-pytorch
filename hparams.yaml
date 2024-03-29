@@ -1,7 +1,7 @@
 asset_root: '/home/isak/code/arnold/training'
 
 data_io:
-  path: '/home/isak/code/arnold/data/pkl_files/instance_pkl_8bars_fpb16_48p_ckey'
+  path: '/home/isak/code/arnold/data/pkl_files/instance_pkl_8bars_fpb16_48p_12keys'
 
   loader:
     num_workers: 8
